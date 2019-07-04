@@ -8,7 +8,9 @@
     "bundle-android": "react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/",
     "test": "jest",
     "lint-fix": "eslint --fix js/",
-    "postinstall": "rndebugger-open"
+    "postinstall": "rndebugger-open",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "jest": {
     "preset": "react-native",
@@ -42,7 +44,8 @@
     "redux-logger": "^3.0.1",
     "redux-persist": "^4.9.1",
     "redux-thunk": "^2.2.0",
-    "rn-placeholder": "^1.0.1"
+    "rn-placeholder": "^1.0.1",
+    "snyk": "^1.190.0"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
@@ -63,5 +66,6 @@
     "react-native-debugger-open": "^0.3.11",
     "react-test-renderer": "16.0.0-alpha.6",
     "redux-mock-store": "^1.2.3"
-  }
+  },
+  "snyk": true
 }
